@@ -4,6 +4,13 @@ const app = express();
 const port = 3000;
 const patientsRoutes = require('./patientRoutes'); // Import the routes
 
+app.use((req,res,next) => {
+    const log = 'ANDROID CONNECTING';
+    console.log(log);
+    next();
+
+}
+)
 
 
 
